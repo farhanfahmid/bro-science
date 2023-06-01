@@ -1,0 +1,362 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  html,
+  body {
+    font-family: Arial, sans-serif;
+    height: 100% 100%;
+  }
+
+  body {
+    display:  flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  section {
+    flex: 1;
+  }
+
+  #header-style {
+    font: 200;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: xx-large;
+    padding-bottom: 10px;
+  }
+
+  
+  
+  header {
+    
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    height: 200px; 
+    
+  }
+
+  .image-container {
+    display: flex;
+    height: 100%;
+    
+  }
+  
+  .image {
+    flex-grow: 1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+
+  .hover-section {
+    position: relative;
+  }
+  
+  .section-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .show-contents-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .hover-section:hover .show-contents-button {
+    opacity: 1;
+  }
+  
+  .contents-table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    border-collapse: collapse;
+    
+  }
+
+  .contents-table th, .contents-table td {
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  .contents-table th {
+    background-color: black;
+  }
+  
+  .contents-table td {
+    text-align: center;
+  }
+
+  .contents-table.show {
+    opacity: 1;
+  }
+  
+  .contents-table tr {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+    transition: opacity 0.3s;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    position: relative;
+  }
+
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  
+  .hover-section:hover .contents-table {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  #section1 {
+   
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/benchpress.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    ;
+    
+  }
+  
+  #section2 {
+  
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/deadlift.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #section3 {
+
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/shoulderpress1.webp");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #section4 {
+
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/squat.jpeg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #section5 {
+
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/abs.webp");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: dark;
+  }
+
+  #section6 {
+
+    margin-bottom: 40px;
+    padding: 20px;
+    height: 600px;
+    background-image: url("images/arms.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #section-content1 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: bisque;
+
+  }
+
+  #section-content2 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+    color: aliceblue;
+
+  }
+
+  #section-content3 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+    
+    color: azure;
+
+  }
+
+  #section-content4 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: fantasy;
+    font-style: initial;
+    
+    color: cornsilk;
+    
+
+  }
+
+  #section-content5 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: xx-large;
+    color: whitesmoke;
+    
+
+  }
+
+  #section-content6 {
+
+    font-size: x-large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: xx-large;
+    color: honeydew;
+    
+
+  }
+
+
+
+  #table1-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0.7;
+  }
+  #table2-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+
+    opacity: 0.7;
+  }
+  #table3-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+  }
+  #table4-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 0.7;
+  }
+  #table5-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0.7;
+  }
+  #table6-style {
+    background-color: black;
+    color: aliceblue;
+    border-collapse: collapse;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0.7;
+  }
+
+ 
+  
+ 
+  
+  
+  footer {
+  
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+  }
+  
+  .social-link {
+    margin-right: 10px;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
